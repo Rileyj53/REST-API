@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
 const app = require('./app');
-const port = 8000;
+const port = 3000;
 const hostname = 'localhost'; // so you can change it to your local ip address if needed
 
 const mongoose = require('mongoose');
@@ -19,3 +19,11 @@ mongoose
         console.error('Could not connect to MongoDB:', err.message);
         process.exit(1);
     });
+
+try {
+    app.listen(port, hostname, () => {
+        console.log(`App running on port ${hostname}:${port}...`);
+    });
+} catch (error) {
+    console.error(`Server error: ${error}`);
+}
