@@ -1,4 +1,7 @@
-# Module 6 Assignment - Validate Model Data Using Validator Library
+# My REST API
+## Module 6 Assignment - Validate Model Data Using Validator Library
+
+This is a REST API I made for IFT 488. It connects to a mongo DB database and uses validation to ensure the data passed to the database is correct and useable
 
 ## Running the program
 
